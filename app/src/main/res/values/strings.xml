@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">motionlayout</string>
+    <string name="search">search</string>
+    <string name="navigation">navigation</string>
+    <string name="settings">settings</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut dolor et risus
+        feugiat sodales sed sit amet turpis. Maecenas ullamcorper mi nisl, id blandit lectus ultrices non. Pellentesque
+        lectus dui, volutpat eu dolor quis, posuere lobortis ante. Suspendisse a pellentesque felis. Mauris rutrum
+        tellus magna, sed tincidunt lorem euismod sed. Curabitur in dolor sed purus rutrum facilisis. Maecenas
+        condimentum imperdiet odio, iaculis interdum diam mattis sit amet. Maecenas sed lacinia risus. Morbi at ante
+        tellus. Fusce nec elementum diam. \n\nIn aliquet pharetra pretium. Donec vehicula faucibus elit et lacinia. Aliquam porttitor ligula at mi mattis, sit
+        amet mattis lectus suscipit. Maecenas in augue in neque pellentesque aliquam. Nunc non turpis ut mauris
+        tincidunt dapibus. Proin eu nunc sagittis, tempor sapien sed, maximus nisi. Nunc sit amet nisl risus.
+        Suspendisse et nunc a diam tincidunt mattis id at sapien.
+    </string>
+</resources>

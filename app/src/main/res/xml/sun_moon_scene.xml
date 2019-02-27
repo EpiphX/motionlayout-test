@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+            motion:constraintSetStart="@+id/start"
+            motion:constraintSetEnd="@+id/end"
+            motion:duration="1000">
+        <OnSwipe
+                motion:touchAnchorId="@+id/sun"
+                motion:touchAnchorSide="right"
+                motion:maxVelocity="1.0"
+                motion:maxAcceleration="1.0"
+                motion:dragDirection="dragRight"/>
+
+        <OnClick
+                motion:target="@+id/sun"
+                motion:clickAction="toggle"/>>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+                android:id="@+id/sun"
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                android:src="@drawable/ic_wb_sunny_24dp"
+                motion:pathMotionArc="startHorizontal"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="@dimen/margin_large"/>
+
+        <Constraint
+                android:id="@+id/moon"
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                android:src="@drawable/ic_moon_24dp"
+                motion:pathMotionArc="startVertical"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintRight_toLeftOf="parent"/>
+
+        <Constraint
+                android:id="@+id/sky"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                motion:layout_constrainedHeight="true"
+                motion:layout_constraintDimensionRatio="h, 16:9"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+        >
+            <CustomAttribute
+                    motion:attributeName="BackgroundColor"
+                    motion:customColorValue="@color/blue"
+            />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/cardBackDrop">
+
+            <CustomAttribute
+                    motion:attributeName="BackgroundColor"
+                    motion:customColorValue="@color/white"
+            />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/cardView">
+
+            <CustomAttribute
+                    motion:attributeName="BackgroundColor"
+                    motion:customColorValue="@color/white"
+            />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/cardTextView">
+
+            <CustomAttribute
+                    motion:attributeName="TextColor"
+                    motion:customColorValue="@android:color/black"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+                android:id="@+id/sun"
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                android:src="@drawable/ic_wb_sunny_24dp"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintLeft_toRightOf="parent"
+                android:layout_marginTop="@dimen/margin_xxlarge"/>
+
+        <Constraint
+                android:id="@+id/moon"
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                android:src="@drawable/ic_moon_24dp"
+                android:layout_marginTop="@dimen/margin_large"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"/>
+
+        <Constraint
+                android:id="@+id/sky"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                motion:layout_constrainedHeight="true"
+                motion:layout_constraintDimensionRatio="h, 16:9"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintLeft_toLeftOf="parent"
+                motion:layout_constraintRight_toRightOf="parent"
+        >
+            <CustomAttribute
+                    motion:attributeName="BackgroundColor"
+                    motion:customColorValue="@color/nightBlue"
+            />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/cardBackDrop">
+
+            <CustomAttribute
+                    motion:attributeName="BackgroundColor"
+                    motion:customColorValue="@color/lightGrey"
+            />
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/cardView">
+
+            <CustomAttribute
+                    motion:attributeName="BackgroundColor"
+                    motion:customColorValue="@color/darkGrey"
+            />
+
+        </Constraint>
+
+        <Constraint
+                android:id="@+id/cardTextView">
+
+            <CustomAttribute
+                    motion:attributeName="TextColor"
+                    motion:customColorValue="@android:color/white"/>
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>
